@@ -1,3 +1,12 @@
+/**
+  baba.pde - Permet d'être controler le robot via un téléphone android.
+
+  @author :     Grégory Fromain, < gregoryfromain@gmail.com >
+  @since : 	    27/07/2011
+  @license :    http://creativecommons.org/licenses/by-nc/3.0/
+  @link :       https://github.com/greg06/Baba-Robot
+*/
+
 #include <Wire.h>
 #include <Servo.h>
 #include <DigitalPin.h>

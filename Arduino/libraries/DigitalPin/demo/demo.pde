@@ -1,7 +1,11 @@
-// Par Grégory Fromain <gregoryfromain@gmail.com>
-// le : 04/01/2011
+/**
+  demo.pde - Permet de tester la classe DigitalPin.
 
-// Permet de tester la classe DigitalPin
+  @author :     Grégory Fromain, < gregoryfromain@gmail.com >
+  @since : 	    04/01/2011
+  @license :    http://creativecommons.org/licenses/by-nc/3.0/
+  @link :       https://github.com/greg06/Baba-Robot
+*/
 
 #include <DigitalPin.h>
 
@@ -11,12 +15,11 @@ DigitalPin lumiere;
 
 void setup()
 {
-  lumiere.init(LUMIERE_PIN);
-  lumiere.etat(ON);
-  delay(2000);
-  lumiere.etat(OFF);
-
-  Serial.begin(9600);      //Set Baud Rate
+	lumiere.init(LUMIERE_PIN);
+	lumiere.etat(ON);
+	delay(2000);
+	lumiere.etat(OFF);
+	Serial.begin(9600);      //Set Baud Rate
 }
 
 void loop()

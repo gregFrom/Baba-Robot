@@ -1,6 +1,11 @@
-// Par Grégory Fromain <gregoryfromain@gmail.com>
-// le : 03/08/11
-// Permet de tester la classe Moteur_cc
+/**
+  demo.pde - Permet de tester la classe Moteur_cc
+
+  @author :     Grégory Fromain, < gregoryfromain@gmail.com >
+  @since : 	    03/08/2011
+  @license :    http://creativecommons.org/licenses/by-nc/3.0/
+  @link :       https://github.com/greg06/Baba-Robot
+*/
 
 #include <Moteur_cc.h>
 

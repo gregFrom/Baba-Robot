@@ -1,10 +1,13 @@
-/*
- * DigitalPin.cpp - Bibliotheque pour la gestion de communication entre android et arduino
- *
- * Crée par Grégory Fromain, 04/01/2011.
- *
- * trame de test : 5550123897777
+/**
+  Trame_ascii.cpp - Bibliotheque pour la gestion de communication entre android et arduino
+
+  @author :     Grégory Fromain, < gregoryfromain@gmail.com >
+  @since : 	    27/07/2011
+  @license :    http://creativecommons.org/licenses/by-nc/3.0/
+  @link :       https://github.com/greg06/Baba-Robot
 */
+
+// trame de test : 55501238977
 
 #include "WProgram.h"
 #include "Trame_ascii.h"
@@ -134,9 +137,9 @@ void Trame_ascii::envoi(char adresse, char fonction, char donnee[DONNEE_TAILLE_M
 	char trame_envoi[TRAME_TAILLE_MAX];
 	byte position;
 	byte i;
-	trame_envoi[0] = TRAME_OCTET_START;						// Octet de Start
-	trame_envoi[1] = adresse;								// Octet d'adresse
-	trame_envoi[2] = fonction;								// Octet de la fonction
+	trame_envoi[0] = TRAME_OCTET_START;			// Octet de Start
+	trame_envoi[1] = adresse;					// Octet d'adresse
+	trame_envoi[2] = fonction;					// Octet de la fonction
 	
 	for( i=0; i < DONNEE_TAILLE_MAX; i++)
 	{
@@ -160,6 +163,6 @@ void Trame_ascii::envoi(char adresse, char fonction, char donnee[DONNEE_TAILLE_M
 		trame_envoi[i] = 0;
 	}
 	
-	Serial.print(trame_envoi);								// Envoi de la trame
+	Serial.print(trame_envoi);					// Envoi de la trame
 	
 }

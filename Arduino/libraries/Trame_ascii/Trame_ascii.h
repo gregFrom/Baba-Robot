@@ -1,6 +1,10 @@
-/*
-  Trame_ascii.h - Librarie pour gestion des trames sur le bus serie.
-  Crée par Grégory Fromain <gregoryfromain@gmail.com> , 27/07/2011.
+/**
+  Trame_ascii.h - Bibliotheque pour la gestion de communication entre android et arduino
+
+  @author :     Grégory Fromain, < gregoryfromain@gmail.com >
+  @since : 	    27/07/2011
+  @license :    http://creativecommons.org/licenses/by-nc/3.0/
+  @link :       https://github.com/greg06/Baba-Robot
 */
 
 /*
@@ -39,24 +43,24 @@ Permet de faire passer un flux d'information avec un max de 15 octets
 
 class Trame_ascii
 {
-  public:
-    Trame_ascii();
-	void init(int debit);
-    bool disponible();
-	bool lire_buffer();
-	byte adresse();
-	byte fonction();
-	byte donnee();
-	void debug();
-	void envoi(char adresse, char fonction, char donnee[DONNEE_TAILLE_MAX]);
+	public:
+		Trame_ascii();
+		void init(int debit);
+		bool disponible();
+		bool lire_buffer();
+		byte adresse();
+		byte fonction();
+		byte donnee();
+		void debug();
+		void envoi(char adresse, char fonction, char donnee[DONNEE_TAILLE_MAX]);
 	
-  private:
-    bool _dispo;
-	byte _pos_tableau;
-	char _trame[TRAME_TAILLE_MAX];
-	byte _adresse;
-	byte _fonction;
-	char _donnee[DONNEE_TAILLE_MAX];
+	private:
+		bool _dispo;
+		byte _pos_tableau;
+		char _trame[TRAME_TAILLE_MAX];
+		byte _adresse;
+		byte _fonction;
+		char _donnee[DONNEE_TAILLE_MAX];
 };
 
 #endif

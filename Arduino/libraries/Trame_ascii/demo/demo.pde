@@ -1,6 +1,11 @@
-// Par Grégory Fromain <gregoryfromain@gmail.com>
-// le : 27/07/2011
-// Permet de tester la classe trame_bluetooth
+/**
+  demo.pde - Permet de tester la classe trame_ascii
+
+  @author :     Grégory Fromain, < gregoryfromain@gmail.com >
+  @since : 	    27/07/2011
+  @license :    http://creativecommons.org/licenses/by-nc/3.0/
+  @link :       https://github.com/greg06/Baba-Robot
+*/
 
 #include <Trame_ascii.h>
 

@@ -1,6 +1,10 @@
-/*
+/**
   Moteur_cc.cpp - Librarie pour gestion d'un moteur a courant continue.
-  Crée par Grégory Fromain <gregoryfromain@gmail.com> , 03/08/2011.
+
+  @author :     Grégory Fromain, < gregoryfromain@gmail.com >
+  @since : 	    03/08/2011
+  @license :    http://creativecommons.org/licenses/by-nc/3.0/
+  @link :       https://github.com/greg06/Baba-Robot
 */
 
 #include "WProgram.h"
@@ -49,8 +53,8 @@ void Moteur_cc::rotation(byte mode, byte vitesse)
 			digitalWrite(_pin_direction,HIGH);
 			break;
 */
-		default: // cas par défaut 
-		// si aucune condition n'est vraie, on freine !
+		default:
+			// si aucune condition n'est vraie, on passe en roue libre.
 			digitalWrite(_pin_vitesse,LOW);
 			digitalWrite(_pin_direction,LOW);
 	}

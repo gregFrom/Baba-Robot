@@ -1,7 +1,12 @@
-/*
-  Moteur_cc.cpp - Librarie pour gestion d'un moteur a courant continue.
-  Crée par Grégory Fromain <gregoryfromain@gmail.com> , 03/08/2011.
+/**
+  Moteur_cc.h - Librarie pour gestion d'un moteur a courant continue.
+
+  @author :     Grégory Fromain, < gregoryfromain@gmail.com >
+  @since : 	    03/08/2011
+  @license :    http://creativecommons.org/licenses/by-nc/3.0/
+  @link :       https://github.com/greg06/Baba-Robot
 */
+
 #ifndef Moteur_cc_h
 #define Moteur_cc_h
 
@@ -17,16 +22,16 @@
 
 class Moteur_cc
 {
-  public:
-    Moteur_cc();
-    void init(byte pin_direction, byte pin_vitesse, bool sens_horaire);
-	void rotation(byte mode, byte vitesse);
-	
-  private:
-    byte _pin_direction;
-	byte _pin_vitesse;
-	byte _vitesse;
-	bool _marche_avant_sens_horaire;
+	public:
+		Moteur_cc();
+		void init(byte pin_direction, byte pin_vitesse, bool sens_horaire);
+		void rotation(byte mode, byte vitesse);
+
+	private:
+		byte _pin_direction;
+		byte _pin_vitesse;
+		byte _vitesse;
+		bool _marche_avant_sens_horaire;
 };
 
 #endif

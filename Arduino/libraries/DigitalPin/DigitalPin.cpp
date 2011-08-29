@@ -1,6 +1,10 @@
-/*
+/**
   DigitalPin.cpp - Librarie pour gestion de la sortie d'une broche.
-  Crée par Grégory Fromain, 04/01/2011.
+
+  @author :     Grégory Fromain, < gregoryfromain@gmail.com >
+  @since : 	    04/01/2011
+  @license :    http://creativecommons.org/licenses/by-nc/3.0/
+  @link :       https://github.com/greg06/Baba-Robot
 */
 
 #include "WProgram.h"
@@ -13,8 +17,8 @@ DigitalPin::DigitalPin()
 
 void DigitalPin::init(byte pin)
 {
-  pinMode(pin, OUTPUT);
-  _pin = pin;
+	pinMode(pin, OUTPUT);
+	_pin = pin;
 }
 
 void DigitalPin::action(byte val_action)
@@ -33,11 +37,11 @@ void DigitalPin::action(byte val_action)
 
 void DigitalPin::clignotte(int nombre_clignottement)
 {
-  for(int i=1; i<=nombre_clignottement; i++)
-  {
-    digitalWrite(_pin,ON);
-    delay(200);
-    digitalWrite(_pin,OFF);
-    delay(200);
-  }
+	for(int i=1; i<=nombre_clignottement; i++)
+	{
+		digitalWrite(_pin,ON);
+		delay(200);
+		digitalWrite(_pin,OFF);
+		delay(200);
+	}
 }

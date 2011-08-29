@@ -1,7 +1,12 @@
-/*
-  Moteur_cc.cpp - Librarie pour gestion complete du robot.
-  Crée par Grégory Fromain <gregoryfromain@gmail.com> , 03/08/2011.
+/**
+  Baba.h - Librarie pour gestion complete du robot.
+
+  @author :     Grégory Fromain, < gregoryfromain@gmail.com >
+  @since : 	    03/08/2011
+  @license :    http://creativecommons.org/licenses/by-nc/3.0/
+  @link :       https://github.com/greg06/Baba-Robot
 */
+
 #ifndef Baba_h
 #define Baba_h
 

@@ -1,7 +1,12 @@
-/*
-  DigitalPin.cpp - Librarie pour gestion de la sortie d'une broche.
-  Crée par Grégory Fromain, 04/01/2011.
+/**
+  DigitalPin.h - Librarie pour gestion de la sortie d'une broche.
+
+  @author :     Grégory Fromain, < gregoryfromain@gmail.com >
+  @since : 	    04/011/2011
+  @license :    http://creativecommons.org/licenses/by-nc/3.0/
+  @link :       https://github.com/greg06/Baba-Robot
 */
+
 #ifndef DigitalPin_h
 #define DigitalPin_h
 
