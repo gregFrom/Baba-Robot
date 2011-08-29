@@ -1,0 +1,157 @@
+/**
+ * Permet de gerer les differents organes matériel du robot.
+ * 
+ * @author Grégory Fromain <gregoryfromain@gmail.com>
+ * @verion 0.1
+ */
+package com.robot.baba.capteur_actionneur;
+
+import android.app.Activity;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+
+import com.robot.baba.Baba;
+import com.robot.baba.PositionSensor;
+
+public class Capteur_actionneur extends Baba
+{
+	/*
+	 * Déclaration des constantes.
+	 */
+	//Définition des bits de start et stop	
+	public static final char OCTET_START = '0';
+    public static final char OCTET_FIN_1 = '8';
+    public static final char OCTET_FIN_2 = '9';
+    
+	 // Définition des contantes pour le traitement de la trame bluetooth
+    public static final char ADRESSE_LUMIERE = 'l';
+    public static final char ADRESSE_MOTEUR_DROITE = 'd';
+    public static final char ADRESSE_MOTEUR_GAUCHE = 'g';
+    public static final char ADRESSE_TEMPERATURE = 't';
+    public static final char ADRESSE_TOURELLE = 'x';
+    
+    // Constante des moteurs
+    public static final char MOTEUR_AVANT = 0x10;
+    public static final char MOTEUR_ARRIERE = 0x20;
+    public static final char MOTEUR_FREIN = 0x30;
+    public static final char MOTEUR_ROUE_LIBRE = 0x40;
+    public static final char VITESSE_NORMAL = (char) (100);
+    
+    // Constante eclairage
+    public static final char FONCTION_LUMIERE_ON = 1;
+    public static final char FONCTION_LUMIERE_OFF = 0;
+    
+    // Constante tourelle
+    public static final char SERVO_Y_CENTRE = (char) (90);
+    public static final char SERVO_X_CENTRE = (char) (90);
+    
+    public static final char DONNEE_VIDE = '0';
+    
+    
+    
+    
+    /*
+     * Creation des organes du robot
+     */
+    private Communication_bluetooth bt_arduino = null;
+    private PositionSensor sensor = null;				// Sonde multiposition (accéléromètre, boussole, GPS).
+    
+    
+    /**
+	 * Constructeur
+	 */
+	public Capteur_actionneur(Activity activity)
+	{
+		
+		bt_arduino = new Communication_bluetooth(handlerStatus, handler);
+		sensor = new PositionSensor(activity);
+	}
+	
+    /*
+     * Gestion du bluetooth
+     */
+    private long lastTime = 0;
+    final Handler handler = new Handler() {
+        public void handleMessage(Message msg) {
+            String data = msg.getData().getString("receivedData");
+            
+            long t = System.currentTimeMillis();
+            if(t-lastTime > 100) {// Pour éviter que les messages soit coupés
+                Log.v(TAG, "\n");
+				lastTime = System.currentTimeMillis();
+			}
+            Log.v(TAG, data);
+        }
+    };
+    
+    final Handler handlerStatus = new Handler() 
+    {
+        public void handleMessage(Message msg) 
+        {
+            int co = msg.arg1;
+            if(co == 1)
+            {
+            	Log.v(TAG, "Connected\n");
+            }
+            else if(co == 2) 
+            {
+            	Log.v(TAG, "Disconnected\n");
+            }
+        }
+    };
+	
+	public void trame_envoi(char adresse, char fonction, char donnee)
+    {
+		 String trame = Character.toString(OCTET_START);
+		 trame = trame.concat(Character.toString(adresse));
+		 trame = trame.concat(Character.toString(fonction));
+		 trame = trame.concat(Character.toString(donnee));
+		 trame = trame.concat(Character.toString(OCTET_FIN_1));
+		 trame = trame.concat(Character.toString(OCTET_FIN_2));
+		 bt_arduino.sendData(trame);
+		 Log.v("Baba", trame);
+    }
+	
+	public void bluetooth_close()
+	{
+		bt_arduino.close();
+	}
+	
+	public void bluetooth_connect()
+	{
+		bt_arduino.connect();
+	}
+	
+	public void eclairage(boolean etat_lumiere)
+	{
+		if(etat_lumiere)
+		{
+			bt_arduino.trame_envoi(ADRESSE_LUMIERE, FONCTION_LUMIERE_ON, DONNEE_VIDE);
+		}
+		else
+		{
+			bt_arduino.trame_envoi(ADRESSE_LUMIERE, FONCTION_LUMIERE_OFF, DONNEE_VIDE);
+		}
+		
+	}
+	
+	public void avant()
+	{
+		bt_arduino.trame_envoi(ADRESSE_MOTEUR_DROITE, MOTEUR_AVANT, VITESSE_NORMAL);
+		bt_arduino.trame_envoi(ADRESSE_MOTEUR_GAUCHE, MOTEUR_AVANT, VITESSE_NORMAL);
+	}
+	
+	public void arriere()
+	{
+		bt_arduino.trame_envoi(ADRESSE_MOTEUR_DROITE, MOTEUR_ARRIERE, VITESSE_NORMAL);
+		bt_arduino.trame_envoi(ADRESSE_MOTEUR_GAUCHE, MOTEUR_ARRIERE, VITESSE_NORMAL);
+	}	
+	
+	public void stop()
+	{
+		bt_arduino.trame_envoi(ADRESSE_MOTEUR_DROITE, MOTEUR_ROUE_LIBRE, VITESSE_NORMAL);
+		bt_arduino.trame_envoi(ADRESSE_MOTEUR_GAUCHE, MOTEUR_ROUE_LIBRE, VITESSE_NORMAL);
+	}
+	
+}

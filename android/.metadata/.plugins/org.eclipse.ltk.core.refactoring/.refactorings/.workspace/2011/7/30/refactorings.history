@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;HelloPhoneGap&apos;" deleteContents="false" description="Delete resource &apos;HelloPhoneGap&apos;" element1="/HelloPhoneGap" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1311614077831"/>
+</session>

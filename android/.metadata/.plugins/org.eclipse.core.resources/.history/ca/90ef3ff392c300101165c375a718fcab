@@ -1,0 +1,23 @@
+package com.robot.baba;
+
+import android.bluetooth.BluetoothAdapter;
+import android.util.Log;
+import android.widget.Toast;
+
+public class Communication_bluetooth {
+	
+	private BluetoothAdapter mBluetoothAdapter = null;
+
+	public Communication_bluetooth(){
+		Log.i("Baba", "Démarrage du bluetooth");
+		
+        //Vérification que le péripherique Bluetooth existe bien sur le téléphone.
+        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter(); 
+        if (mBluetoothAdapter == null) { 
+             Toast.makeText(this, R.string.no_bt_device, Toast.LENGTH_LONG).show(); 
+             finish(); 
+             return; 
+        } 
+	}
+	
+}

@@ -1,0 +1,6 @@
+package com.robot.baba;
+
+public class Baba {
+	private static final String TAG = "Baba";
+
+}

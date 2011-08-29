@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+	<TextView  android:id="@+id/text1"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:text="@string/hello"/>
+    
+    <Button android:id="@+id/connect_button"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content"
+    	android:layout_weight="1" 
+    	android:text="@string/disconnected"/>
+    	
+    <Button android:id="@+id/led_button"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content"
+    	android:layout_weight="1" 
+    	android:text="@string/ledON"/>
+
+    <TextView  android:id="@+id/accText"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:text="@string/acc_default"/>
+    	
+    <Button android:id="@+id/forward_button"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content"
+    	android:layout_weight="5" 
+    	android:text="@string/forward"/>
+    	
+     <Button android:text="@+id/Button_gauche" 
+     android:id="@+id/Button02" 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content">
+     </Button>
+   	
+    <Button android:text="@+id/Button01" 
+    android:id="@+id/Button01" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"
+    android:layout_toRightOf :"@+id/Button_gauche"
+    ></Button>
+    
+    <Button android:id="@+id/reverse_button"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content"
+    	android:layout_weight="5" 
+    	android:text="@string/reverse"/>
+    	
+
+
+</LinearLayout>

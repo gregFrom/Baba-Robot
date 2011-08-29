@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;layout&apos;&#x0D;&#x0A;- Original project: &apos;baba&apos;&#x0D;&#x0A;- Destination element: &apos;layout&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     vue_a_propos.xml&#x0D;&#x0A;     device_list.xml&#x0D;&#x0A;     device_name.xml" description="Copy files" element1="res/layout/vue_a_propos.xml" element2="res/layout/device_list.xml" element3="res/layout/device_name.xml" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1312634921037" target="/blu_car/res/layout" units="0" version="1.0"/>
+</session>

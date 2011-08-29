@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">Baba</string>
+<string name="appVersion">0.1</string>
+<string name="hello">Centre de controle de Baba</string>
+<string name="ledON">Eclairage ON</string>
+<string name="ledOFF">Eclairage OFF</string>
+<string name="forward">Avancer</string>
+<string name="reverse">Reculer</string>
+<string name="acc_default">Axe X valeur:</string>
+<string name="connected">Disconnect from device Déconnectez Baba</string>
+<string name="disconnected">Connexion avec Baba</string>
+<string name="no_bt_device">Il n\'y a pas de bluetooth à porté.</string>
+<string name="bt_not_enabled_leaving">Bluetooth was not enabled.</string>
+<string name="macFailed">Erreur de récupération de la clé MAC</string>
+<string name="about_title">A propos</string>
+<string name="aboutText">Application created by Grégory Fromain, 2011.</string>
+<string name="website_url">http://baba-robot.blogspot.com/</string>
+<string name="websiteButton">Visite du site site web</string>
+<string name="okButton">OK</string>
+<string name="pleaseWait">Patientez</string>
+<string name="makingConnectionString">Connexion au périphérique bluetooth...</string>
+<string name="failedToConnect">Echec de connexion au bluetooth.</string>
+
+<!-- DeviceListActivity -->
+ <string name="scanning">Recherche de bluetooch voivin...</string>
+ <string name="select_device">selectionnez votre péripherique</string>
+ <string name="none_paired">Les péripheriques ne peuvent pas être associé.</string>
+ <string name="none_found">Aucun périphériques trouvés</string>
+ <string name="title_paired_devices">Paired Devices</string>
+ <string name="title_other_devices">Other Available Devices</string>
+ <string name="button_scan">Détectez les péripheriques.</string>
+</resources>

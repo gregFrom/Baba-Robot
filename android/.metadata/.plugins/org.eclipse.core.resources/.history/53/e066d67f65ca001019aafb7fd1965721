@@ -1,0 +1,52 @@
+/**
+ * Permet de gerer les differents organes matériel du robot.
+ * 
+ * @author Grégory Fromain <gregoryfromain@gmail.com>
+ * @verion 0.1
+ */
+package com.robot.baba.capteur_actionneur;
+
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+
+import com.robot.baba.Communication_bluetooth;
+
+public class Capteur_actionneur extends Communication_bluetooth{
+	
+	private long lastTime = 0;
+	
+	final Handler handler = new Handler() {
+        public void handleMessage(Message msg) {
+            String data = msg.getData().getString("receivedData");
+            
+            long t = System.currentTimeMillis();
+            if(t-lastTime > 100) {// Pour éviter que les messages soit coupés
+                Log.v("Baba", "\n");
+				lastTime = System.currentTimeMillis();
+			}
+            Log.v("Baba", data);
+        }
+    };
+    
+    final Handler handlerStatus = new Handler() {
+        public void handleMessage(Message msg) {
+            int co = msg.arg1;
+            if(co == 1) {
+            	Log.v("Baba", "Connected\n");
+            } else if(co == 2) {
+            	Log.v("Baba", "Disconnected\n");
+            }
+        }
+    };
+
+	/**
+	 * Constructeur
+	 */
+	public Capteur_actionneur(Handler handlerStatus, Handler handler)
+	{
+		super(handlerStatus, handler);
+	}
+	
+	
+}

@@ -1,0 +1,62 @@
+/**
+ * Permet de gerer un moteur à courant continue
+ * 
+ * @author Grégory Fromain <greoryfromain@gmail.com>
+ * @version 0.1
+ */
+
+package com.robot.baba.capteur_actionneur;
+
+public class Moteur_cc {
+	// Constante des moteurs
+    public static final char MOTEUR_AVANT = 0x10;
+    public static final char MOTEUR_ARRIERE = 0x20;
+    public static final char MOTEUR_FREIN = 0x30;
+    public static final char MOTEUR_ROUE_LIBRE = 0x40;
+    public static final char VITESSE_NORMAL = (char) (100);
+	
+	char sens, vitesse, adresse;
+	
+	public Moteur_cc(char val_adresse)
+	{
+		sens = MOTEUR_ROUE_LIBRE;
+		vitesse = 0;
+		adresse = val_adresse;
+	}
+	
+	public char adresse()
+	{
+		return adresse ;
+	}
+	
+	/**
+	 * Gestion du sens
+	 */
+	
+	public char sens (char valeur_sens){
+		sens = valeur_sens;
+		return sens;
+	}
+	
+	public char sens()
+	{
+		return sens;
+	}
+	
+/**
+ * Gestion de la vitesse du moteur.
+ * La valeur est un char et varie donc de 0 à 255
+ * 
+ * @param valeur_vitesse
+ * @return vitesse
+ */
+	public char vitesse (char valeur_vitesse){
+		vitesse = valeur_vitesse;
+		return vitesse;
+	}
+	
+	public char vitesse()
+	{
+		return vitesse;
+	}
+}
