@@ -103,7 +103,7 @@ void loop(void)
 				
 			case ADRESSE_TEMPERATURE:
 				// renvoie la temperature dans une trame bluetooth. (le 3 param est inutile dans ce cas.)
-				trame_bluetooth.envoi(ADRESSE_TEMPERATURE, capt_temp1.prendre(), 0);
+				trame_bluetooth.envoi(ADRESSE_TEMPERATURE, 0, capt_temp1.prendre());
 				break;
 
 			case ADRESSE_TOURELLE:
