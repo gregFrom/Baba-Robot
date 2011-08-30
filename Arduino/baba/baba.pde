@@ -89,29 +89,35 @@ void loop(void)
 				// et val_donnee donne la puissance
 				moteur_droite.rotation(char(val_fonction), char(val_donnee));
 				break;
-				
+
 			case ADRESSE_MOTEUR_GAUCHE:
 				// dans ce cas val_fonction donne le sens du moteur Gauche.
 				// et val_donnee donne la puissance
 				moteur_gauche.rotation(char(val_fonction), char(val_donnee));
 				break;
-				
+
 			case ADRESSE_LUMIERE:
 				//trame_bluetooth.fonction() doit renvoyer soit 0 (ON) ou 1 (OFF)
-				baba.lumiere(val_fonction);	//-48); (debug)
-				break;
-				
-			case ADRESSE_TEMPERATURE:
-				// renvoie la temperature dans une trame bluetooth. (le 3 param est inutile dans ce cas.)
-				trame_bluetooth.envoi(ADRESSE_TEMPERATURE, 0, capt_temp1.prendre());
+				baba.lumiere(val_fonction);
 				break;
 
+			case ADRESSE_LUMIERE_VERTE:
+				//trame_bluetooth.fonction() doit renvoyer soit 0 (ON) ou 1 (OFF)
+				baba.lumiere_verte(val_fonction);
+				break;
+
+			case ADRESSE_TEMPERATURE:
+				// renvoie la temperature dans une trame bluetooth. (le 3 param est inutile dans ce cas.)
+				trame_bluetooth.envoi(ADRESSE_TEMPERATURE, capt_temp1.prendre(), 0);
+				break;
+				
 			case ADRESSE_TOURELLE:
 				// dans ce cas val_fonction donne la angle dans l'axe X.
 				// et val_donnee donne la valeur de l'angle Y.
 				int delay_tourelle = tourelle_us.deplacement(val_fonction, val_donnee);
 				// On retourne le delais au téléphone (Sa peut etre utile)
 				trame_bluetooth.envoi(ADRESSE_TOURELLE, char(delay_tourelle), 0);
+				break;			
 		}		
 	}
 }

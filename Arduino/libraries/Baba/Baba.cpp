@@ -20,10 +20,16 @@ Baba::Baba()
 //Initialisation de baba.
 void Baba::init()
 {
-	eclairage.init(PIN_LUMIERE);
+	led_blanche.init(PIN_LED_BLANCHE);
+	led_verte.init(PIN_LED_VERTE);	
 }
 
 void Baba::lumiere( byte action)
 {
-	eclairage.action(action);
+	led_blanche.action(action);
+}
+
+void Baba::lumiere_verte( byte action)
+{
+	led_verte.action(action);
 }
