@@ -1,4 +1,5 @@
-﻿# Baba-Robot
+﻿Baba-Robot
+==========
 
 ## Présentation
 Baba est un robot combinant le meilleur d'android et arduino.
@@ -20,8 +21,8 @@ L'objectif est d'arrivé à produire un robot explorateur ludique.
 *  Ecran tactile 800 x 480px
 *  Alimentation 5 x 1,2v 2550mAh
 
-## Nomenclature
-Une nomenclature est disponible sur le forum de Pobot. [C'est ici.](https://github.com/greg06/Baba-Robot/wiki/Nomenclature).
+## Wiki et documentation
+Une documentation est disponible via le wiki de ce projet github. [Accès à la page résumé](https://github.com/greg06/Baba-Robot/wiki/.R%C3%A9sum%C3%A9).
 
 ## Galerie photos
 Quelques photos son disponible sur la galerie de Pobot. [C'est ici](http://albums.pobot.org/les-robots/greg/).
