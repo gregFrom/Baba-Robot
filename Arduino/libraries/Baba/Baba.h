@@ -40,6 +40,13 @@
 #define ADRESSE_LUMIERE				'l' 	// attention c'est bien un L minuscule
 #define ADRESSE_LUMIERE_VERTE		'v'
 #define ADRESSE_BOUTON				'b'
+#define ADRESSE_ETAT_ROBOT			'e'
+
+// Mot cles pour etat du robot
+#define ETAT_INIT_OK				100
+#define ETAT_OK						110
+#define ETAT_TEST_LIAISON			120
+#define ETAT_ERREUR					200
 
 class Baba
 {
