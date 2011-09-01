@@ -39,6 +39,7 @@
 #define ADRESSE_TEMPERATURE			't'
 #define ADRESSE_LUMIERE				'l' 	// attention c'est bien un L minuscule
 #define ADRESSE_LUMIERE_VERTE		'v'
+#define ADRESSE_BOUTON				'b'
 
 class Baba
 {

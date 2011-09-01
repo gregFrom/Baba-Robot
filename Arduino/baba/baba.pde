@@ -15,6 +15,7 @@
 #include <Moteur_cc.h>
 #include <Baba.h>
 #include <Trame_ascii.h>
+#include <Bouton_romeo.h>
 
 Baba 		baba;
 Temperature capt_temp1(PIN_TEMPERATURE);
@@ -22,6 +23,7 @@ Tourelle 	tourelle_us;
 Trame_ascii trame_bluetooth;
 Moteur_cc 	moteur_droite;
 Moteur_cc 	moteur_gauche;
+Bouton_romeo bouton_baba;
 
 int mesure_us()
 {
@@ -111,13 +113,27 @@ void loop(void)
 				trame_bluetooth.envoi(ADRESSE_TEMPERATURE, capt_temp1.prendre(), 0);
 				break;
 				
+			case ADRESSE_BOUTON:
+				// Il peut être utile que le telephone demande l'etat des boutons
+				// Dans ce cas on lui renvoit la trame envoyé lors d'un changement d'etat.
+				trame_bluetooth.envoi(ADRESSE_BOUTON, bouton_baba.numero_bouton(), 0);
+				break;			
+				
 			case ADRESSE_TOURELLE:
 				// dans ce cas val_fonction donne la angle dans l'axe X.
 				// et val_donnee donne la valeur de l'angle Y.
 				int delay_tourelle = tourelle_us.deplacement(val_fonction, val_donnee);
 				// On retourne le delais au téléphone (Sa peut etre utile)
 				trame_bluetooth.envoi(ADRESSE_TOURELLE, char(delay_tourelle), 0);
-				break;			
-		}		
+				break;
+
+		}	
 	}
+	
+	//Gestion des boutons S1 à S5
+    if(bouton_baba.changement_etat_bouton())
+    {
+		// Une trame est envoyé à chaque appuis ou relachement d'un bouton.
+		trame_bluetooth.envoi(ADRESSE_BOUTON, bouton_baba.numero_bouton(), 0);
+    }	
 }
