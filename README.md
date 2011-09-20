@@ -27,6 +27,8 @@ Une documentation est disponible via le wiki de ce projet github. [Accès à la 
 ## Galerie photos
 Quelques photos son disponible sur la galerie de Pobot. [C'est ici](http://albums.pobot.org/les-robots/greg/).
 
+Et sur picasa web [C'est ici](https://picasaweb.google.com/gregoryfromain/Baba?authuser=0&feat=directlink)
+
 ## Licence
 [![Contrat Creative Commons](http://i.creativecommons.org/l/by-nc/3.0/88x31.png)](http://creativecommons.org/licenses/by-nc/3.0/)
 
