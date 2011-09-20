@@ -14,12 +14,13 @@
 
 #define PIN_BOUTON_ROMEO	7
 #define NOMBRE_DE_BOUTON	5
-#define AUCUN_BOUTON_ACTIF	-1
-#define BOUTON_S1			0
-#define BOUTON_S2			1
-#define BOUTON_S3			2
-#define BOUTON_S4			3
-#define BOUTON_S5			4
+#define AUCUN_BOUTON_ACTIF	'!'
+#define BOUTON_S1			'1'
+#define BOUTON_S2			'2'
+#define BOUTON_S3			'3'
+#define BOUTON_S4			'4'
+#define BOUTON_S5			'5'
+#define DEBUT_ASCII_NUM		49
 
 class Bouton_romeo
 {

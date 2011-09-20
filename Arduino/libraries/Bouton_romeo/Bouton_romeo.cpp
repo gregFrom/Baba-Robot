@@ -50,7 +50,7 @@ bool Bouton_romeo::changement_etat_bouton()
 */
 char Bouton_romeo::numero_bouton()
 {
-	return _val_toucle;
+	return _val_toucle + DEBUT_ASCII_NUM;
 }
 
 /**
@@ -72,5 +72,5 @@ byte Bouton_romeo::touche_active()
 		}	
 	}
 	
-	return AUCUN_BOUTON_ACTIF; 								// Aucune touche pressé  	
+	return AUCUN_BOUTON_ACTIF - DEBUT_ASCII_NUM; 				// Aucune touche pressé ou relachement	
 }

@@ -73,7 +73,9 @@ void setup(void)
     
 	moteur_droite.rotation(ROUE_LIBRE , STOP);
 	moteur_gauche.rotation(ROUE_LIBRE , STOP);
-	Serial.println("Init Ok");
+	
+	//envoi une info au téléphone pour dire que le robot est prêt.
+	trame_bluetooth.envoi(ADRESSE_ETAT_ROBOT, ETAT_INIT_OK, 0);
 }
 void loop(void)
 {
@@ -117,7 +119,15 @@ void loop(void)
 				// Il peut être utile que le telephone demande l'etat des boutons
 				// Dans ce cas on lui renvoit la trame envoyé lors d'un changement d'etat.
 				trame_bluetooth.envoi(ADRESSE_BOUTON, bouton_baba.numero_bouton(), 0);
-				break;			
+				break;
+
+			case ADRESSE_ETAT_ROBOT:
+				// Permet de faire une test simple entre le tel et le robot.
+				if(val_fonction == ETAT_TEST_LIAISON)
+				{
+					trame_bluetooth.envoi(ADRESSE_ETAT_ROBOT, ETAT_TEST_LIAISON, 0);
+				}
+				break; 
 				
 			case ADRESSE_TOURELLE:
 				// dans ce cas val_fonction donne la angle dans l'axe X.
