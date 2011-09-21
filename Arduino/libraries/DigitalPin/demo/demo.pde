@@ -16,9 +16,9 @@ DigitalPin lumiere;
 void setup()
 {
 	lumiere.init(LUMIERE_PIN);
-	lumiere.etat(ON);
+	lumiere.action(ON);
 	delay(2000);
-	lumiere.etat(OFF);
+	lumiere.action(OFF);
 	Serial.begin(9600);      //Set Baud Rate
 }
 
@@ -30,10 +30,10 @@ void loop()
         switch(val)
         {
             case 'L'://Led On
-                lumiere.etat(ON);
+                lumiere.action(ON);
                 break;
             case 'l'://Led Off
-                lumiere.etat(OFF);
+                lumiere.action(OFF);
                 break;
         }
     }
