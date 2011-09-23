@@ -75,8 +75,11 @@ void setup(void)
 	moteur_gauche.rotation(ROUE_LIBRE , STOP);
 	
 	//envoi une info au téléphone pour dire que le robot est prêt.
-	trame_bluetooth.envoi(ADRESSE_ETAT_ROBOT, ETAT_INIT_OK, 0);
+	trame_bluetooth.envoi(ADRESSE_ETAT_ROBOT, 'o', 0);
 }
+
+int v_alim = 0;
+
 void loop(void)
 {
 	trame_bluetooth.lire_buffer();
@@ -112,7 +115,14 @@ void loop(void)
 
 			case ADRESSE_TEMPERATURE:
 				// renvoie la temperature dans une trame bluetooth. (le 3 param est inutile dans ce cas.)
-				trame_bluetooth.envoi(ADRESSE_TEMPERATURE, capt_temp1.prendre(), 0);
+				trame_bluetooth.envoi(ADRESSE_TEMPERATURE, baba.mesure_temperature(), 0);
+				break;
+        
+			case ADRESSE_BATTERIE:
+				// renvoie la tension de la batterie dans une trame bluetooth.
+        v_alim = baba.mesure_batterie();
+        Serial.print( v_alim );
+				//trame_bluetooth.envoi(ADRESSE_TEMPERATURE, capt_temp1.prendre(), 0);
 				break;
 				
 			case ADRESSE_BOUTON:
