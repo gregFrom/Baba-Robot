@@ -5,7 +5,7 @@
 Baba est un robot combinant le meilleur d'android et arduino.
 L'objectif est d'arrivé à produire un robot explorateur ludique.
 
-![Photo de Baba](https://fbcdn-sphotos-a.akamaihd.net/hphotos-ak-snc6/283825_1915115443497_1410276463_31663073_1736601_n.jpg)
+![Photo de Baba](https://lh4.googleusercontent.com/-o3cuWK8g9zE/ToiINtNNVgI/AAAAAAAAALA/NCCNbTVeY4U/2011-10-02%25252017.48.30.jpg)
 
 ## Caractéristique technique
 *  4 roues motrices avec Moteur 6v et roue codeuse sur les roues arrières
