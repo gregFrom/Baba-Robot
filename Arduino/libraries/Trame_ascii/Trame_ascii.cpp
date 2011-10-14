@@ -166,3 +166,9 @@ void Trame_ascii::envoi(char adresse, char fonction, char donnee[DONNEE_TAILLE_M
 	Serial.print(trame_envoi);					// Envoi de la trame
 	
 }
+
+void Trame_ascii::debug_int(char myStrings[10], int val_int)
+{
+  Serial.print(myStrings);
+  Serial.println(val_int);
+}

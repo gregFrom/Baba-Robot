@@ -32,13 +32,13 @@ Permet de faire passer un flux d'information avec un max de 15 octets
 
 #include "WProgram.h"
 
-#define TRAME_OCTET_START		'0'//0x01
-#define TRAME_OCTET_STOP1		'8'//0x0D
-#define TRAME_OCTET_STOP2		'9'//0x0A
-#define TRAME_OCTET_MIN			0x20
+#define TRAME_OCTET_START		  '0'//0x01
+#define TRAME_OCTET_STOP1		  '8'//0x0D
+#define TRAME_OCTET_STOP2		  '9'//0x0A
+#define TRAME_OCTET_MIN			  0x20
 
-#define TRAME_TAILLE_MAX        20
-#define DONNEE_TAILLE_MAX       15	//TRAME_TAILLE_MAX-5
+#define TRAME_TAILLE_MAX      20
+#define DONNEE_TAILLE_MAX     15	//TRAME_TAILLE_MAX-5
 #define DONNEE_POSITION_MIN		3
 
 class Trame_ascii
@@ -53,7 +53,7 @@ class Trame_ascii
 		byte donnee();
 		void debug();
 		void envoi(char adresse, char fonction, char donnee[DONNEE_TAILLE_MAX]);
-	
+    void debug_int(char myStrings[10], int val_int);
 	private:
 		bool _dispo;
 		byte _pos_tableau;
