@@ -9,7 +9,7 @@
 #ifndef Tourelle_h
 #define Tourelle_h
 
-#include "WProgram.h"
+#include "Arduino.h"
 
 #include "../../../../libraries/servo/Servo.h"
 

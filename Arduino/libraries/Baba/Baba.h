@@ -10,7 +10,7 @@
 #ifndef Baba_h
 #define Baba_h
 
-#include "WProgram.h"
+#include "Arduino.h"
 #include "../Moteur_cc/Moteur_cc.h"
 #include "../DigitalPin/DigitalPin.h"
 

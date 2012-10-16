@@ -9,7 +9,7 @@
 
 // trame de test : 55501238977
 
-#include "WProgram.h"
+#include "Arduino.h"
 #include "Trame_ascii.h"
 
 Trame_ascii::Trame_ascii()

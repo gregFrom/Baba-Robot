@@ -1,8 +1,8 @@
 /**
-  baba.pde - Permet d'être controler le robot via un téléphone android.
+  baba.ino - Permet d'être controler le robot via un téléphone android.
 
   @author :     Grégory Fromain, < gregoryfromain@gmail.com >
-  @since : 	    27/07/2011
+  @since : 	27/07/2011
   @license :    http://creativecommons.org/licenses/by-nc/3.0/
   @link :       https://github.com/greg06/Baba-Robot
 */
@@ -18,12 +18,11 @@
 #include <Bouton_romeo.h>
 
 Baba 		baba;
-Temperature capt_temp1(PIN_TEMPERATURE);
 Tourelle 	tourelle_us;
-Trame_ascii trame_bluetooth;
+Trame_ascii     trame_bluetooth;
 Moteur_cc 	moteur_droite;
 Moteur_cc 	moteur_gauche;
-Bouton_romeo bouton_baba;
+Bouton_romeo    bouton_baba;
 
 int mesure_us()
 {
@@ -31,8 +30,8 @@ int mesure_us()
   Wire.beginTransmission(112); // transmit to device #112 (0x70)
                                // the address specified in the datasheet is 224 (0xE0)
                                // but i2c adressing uses the high 7 bits so it's 112
-  Wire.send(0x00);             // sets register pointer to the command register (0x00)  
-  Wire.send(0x51);             // command sensor to measure in "inches" (0x50) 
+  Wire.write(0x00);             // sets register pointer to the command register (0x00)  
+  Wire.write(0x51);             // command sensor to measure in "inches" (0x50) 
                                // use 0x51 for centimeters
                                // use 0x52 for ping microseconds
   Wire.endTransmission();      // stop transmitting
@@ -42,7 +41,7 @@ int mesure_us()
 
   // step 3: instruct sensor to return a particular echo reading
   Wire.beginTransmission(112); // transmit to device #112
-  Wire.send(0x02);             // sets register pointer to echo #1 register (0x02)
+  Wire.write(0x02);             // sets register pointer to echo #1 register (0x02)
   Wire.endTransmission();      // stop transmitting
 
   // step 4: request reading from sensor
@@ -52,9 +51,9 @@ int mesure_us()
   int reading = -1;
   if(2 <= Wire.available())    // if two bytes were received
   {
-    reading = Wire.receive();  // receive high byte (overwrites previous reading)
+    reading = Wire.read();  // receive high byte (overwrites previous reading)
     reading = reading << 8;    // shift high byte to be high 8 bits
-    reading |= Wire.receive(); // receive low byte as lower 8 bits
+    reading |= Wire.read(); // receive low byte as lower 8 bits
   }
 return reading;
 }

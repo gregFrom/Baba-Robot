@@ -10,7 +10,7 @@
 #ifndef Bouton_romeo_h
 #define Bouton_romeo_h
 
-#include "WProgram.h"
+#include "Arduino.h"
 
 #define PIN_BOUTON_ROMEO	7
 #define NOMBRE_DE_BOUTON	5

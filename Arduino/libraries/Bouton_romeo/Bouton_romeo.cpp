@@ -7,7 +7,7 @@
   @link :       https://github.com/greg06/Baba-Robot
 */
 
-#include "WProgram.h"
+#include "Arduino.h"
 #include "Bouton_romeo.h"
 
 /**

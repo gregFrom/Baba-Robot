@@ -10,7 +10,7 @@
 #ifndef Moteur_cc_h
 #define Moteur_cc_h
 
-#include "WProgram.h"
+#include "Arduino.h"
 
 #define SENS_HORAIRE			true
 #define INVERSE_SENS_HORAIRE   	false

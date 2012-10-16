@@ -30,7 +30,7 @@ Permet de faire passer un flux d'information avec un max de 15 octets
 #ifndef Trame_ascii_h
 #define Trame_ascii_h
 
-#include "WProgram.h"
+#include "Arduino.h"
 
 #define TRAME_OCTET_START		  '0'//0x01
 #define TRAME_OCTET_STOP1		  '8'//0x0D

@@ -7,7 +7,7 @@
   @link :       https://github.com/greg06/Baba-Robot
 */
 
-#include "WProgram.h"
+#include "Arduino.h"
 #include "Baba.h"
 #include "../Moteur_cc/Moteur_cc.h"
 #include "../DigitalPin/DigitalPin.h"

@@ -10,7 +10,7 @@
 #ifndef DigitalPin_h
 #define DigitalPin_h
 
-#include "WProgram.h"
+#include "Arduino.h"
 
 #define ON           1
 #define OFF          0
