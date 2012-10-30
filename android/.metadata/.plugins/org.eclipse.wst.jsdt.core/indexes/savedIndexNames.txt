@@ -1,5 +1,0 @@
-INDEX VERSION 1.122+C:\temp_git\android\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3570904054.index
-780216967.index
-1571512270.index
-3018630082.index
