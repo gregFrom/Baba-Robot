@@ -18,7 +18,7 @@ L'objectif est d'arrivé à produire un robot explorateur ludique.
 
 *  [Optimisation Raspberry](/tree/master/doc/software/raspberry)
 *  [Installation de node et récupération des packages](/tree/master/doc/software/node)
-*  [Configuration du wifi](#)
+*  [Configuration du wifi](/tree/master/doc/software/wifi)
 *  [Configuration de la webcam](#)
 
 
