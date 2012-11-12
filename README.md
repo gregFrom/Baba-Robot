@@ -16,7 +16,11 @@ L'objectif est d'arrivé à produire un robot explorateur ludique.
    git clone https://github.com/greg06/Baba-Robot.git
 ```
 
-*[Installation de node et récupération des packages](/doc/software/node)
+*  [Optimisation Raspberry](#)
+*  [Installation de node et récupération des packages](doc/software/node)
+*  [Configuration du wifi](#)
+*  [Configuration de la webcam](#)
+
 
 
 ## Caractéristique technique
