@@ -9,16 +9,20 @@ L'objectif est d'arrivé à produire un robot explorateur ludique.
 
 
 ##Import du projet sur raspberry
-``` bash
+
    #installation de git si besoin.
    [[ -z $(which git-core) ]] && sudo apt-get install git-core build-essential
    cd ~
    git clone https://github.com/greg06/Baba-Robot.git
+
+Si vous avez déjà importé le projet et souhaitez le mettre à jour
+``` bash
+   cd ~/Baba-Robot/ && git pull
 ```
 
-*  [Optimisation Raspberry](tree/master/doc/software/raspberry)
-*  [Installation de node et récupération des packages](tree/master/doc/software/node)
-*  [Configuration du wifi](tree/master/doc/software/wifi)
+*  [Optimisation Raspberry](https://github.com/greg06/Baba-Robot/tree/master/doc/software/raspberry)
+*  [Installation de node et récupération des packages](https://github.com/greg06/Baba-Robot/tree/master/doc/software/node)
+*  [Configuration du wifi](https://github.com/greg06/Baba-Robot/tree/master/doc/software/wifi)
 *  [Configuration de la webcam](#)
 
 
