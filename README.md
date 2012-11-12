@@ -7,6 +7,15 @@ L'objectif est d'arrivé à produire un robot explorateur ludique.
 
 ![Photo de Baba](https://lh6.googleusercontent.com/-d4xxWBYGvpk/UJrNrjxpw5I/AAAAAAAAHHg/UT7qXzCHGqg/s640/20121107_220702.jpg)
 
+
+##Installation du projet dans votre carte
+``` bash
+   #installation de git si besoin.
+   [[ -z $(which git-core) ]] && sudo apt-get install git-core build-essential
+   cd ~
+   git clone https://github.com/greg06/Baba-Robot.git
+```
+
 ## Caractéristique technique
 *  4 roues motrices avec Moteur 6v et roue codeuse sur les roues arrières
 *  Tourelle 2 axes
