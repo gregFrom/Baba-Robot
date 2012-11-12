@@ -1,4 +1,4 @@
-Configuration du wifi
+﻿Configuration du wifi
 ==========
 
 ## Dongle wifi
@@ -10,5 +10,5 @@ et activer le wlan.
 
 Executer le script :
 ``` bash
-   bash ~/Baba-Robot/doc/software/raspberry/installRaspberry.sh
+   bash ~/Baba-Robot/doc/software/wifi/loadWifi.sh
 ```
