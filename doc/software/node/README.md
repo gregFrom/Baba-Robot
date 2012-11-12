@@ -9,7 +9,7 @@ La mauvaise nouvelle c'est que c'est très long. (prévoir 3 bonnes heures)
 
 Après avoir recupéré les sources, il suffit de lancer la commande suivante :
 ``` bash
-   sudo bash ~/BaBa-Robot/doc/software/node/installNode.sh
+   sudo bash ~/Baba-Robot/doc/software/node/installNode.sh
 ```
 Pour vérifier que node.js est correctement installé :
 ``` bash
@@ -18,6 +18,10 @@ Pour vérifier que node.js est correctement installé :
 ## Charger le projet node de Baba
 Une fois l'installation de node.js est fait, il faut récupérer les dépenses du projet (prévoir 40Mo):
 ``` bash
-   sudo bash ~/Baba-Robot/doc/software/node/loadProject.sh
+   bash ~/Baba-Robot/doc/software/node/loadProject.sh
 ```
-Si tout fonctionne, vous devez voir apparaitre un dossier node
+Si tout fonctionne, vous devez voir apparaitre quelques modules dans le dossier 
+node_modules dans :
+``` bash
+cd ~/Baba-Robot/node/ && ls
+```

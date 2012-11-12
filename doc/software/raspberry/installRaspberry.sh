@@ -14,7 +14,6 @@ sudo raspi-config
 
 #Augnentation de la ram pour le processeur (224Mo).
 sudo rpi-update
-sudo rpi-update 224
 
 #Reboot pour valider toutes les modifications.
 sudo reboot
