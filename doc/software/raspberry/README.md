@@ -15,7 +15,7 @@ de realiser les taches suivantes (il peut être utile de jeter un oeil au script
 *  Mise à jour des aptitudes
 *  Purge des langues inutilisés (toutes sauf l'anglais, permet de gagner ~40Mo)
 *  Extension de la partition
-*  Augnentation de la ram pour le processeur (224Mo).
+*  Mise à jour de la carte Raspberry.
 *  Reboot de la carte pour valider toutes les modifications.
 
 Executer le script :
