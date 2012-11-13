@@ -24,8 +24,8 @@ Si vous avez déjà importé le projet et souhaitez le mettre à jour
 *  [Optimisation Raspberry](https://github.com/greg06/Baba-Robot/tree/master/doc/software/raspberry)
 *  [Installation de node et récupération des packages](https://github.com/greg06/Baba-Robot/tree/master/doc/software/node)
 *  [Configuration du wifi](https://github.com/greg06/Baba-Robot/tree/master/doc/software/wifi)
-*  [Configuration de la webcam](#)
-
+*  [Configuration de la webcam](https://github.com/greg06/Baba-Robot/tree/master/doc/software/webcam)
+*  [Configuration du son](https://github.com/greg06/Baba-Robot/tree/master/doc/software/sound)
 
 
 ## Caractéristique technique
