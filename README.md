@@ -3,10 +3,9 @@
 
 ## Présentation
 Baba est un robot combinant le meilleur de la carte raspberry et arduino.
-L'objectif est d'arrivé à produire un robot explorateur ludique.
+L'objectif est d'arriver à produire un robot explorateur ludique.
 
 ![Photo de Baba](https://lh6.googleusercontent.com/-d4xxWBYGvpk/UJrNrjxpw5I/AAAAAAAAHHg/UT7qXzCHGqg/s640/20121107_220702.jpg)
-
 
 ##Import du projet sur raspberry
 ``` bash
@@ -27,7 +26,6 @@ Si vous avez déjà importé le projet et souhaitez le mettre à jour
 *  [Configuration de la webcam](https://github.com/greg06/Baba-Robot/tree/master/doc/software/webcam)
 *  [Configuration du son](https://github.com/greg06/Baba-Robot/tree/master/doc/software/sound)
 
-
 ## Caractéristique technique
 *  4 roues motrices avec Moteur 6v et roue codeuse sur les roues arrières
 *  Tourelle 2 axes
@@ -40,11 +38,8 @@ Si vous avez déjà importé le projet et souhaitez le mettre à jour
 *  Carte Raspberry Pi
 *  Alimentation 5 x 1,2v 2550mAh
 
-## Documentation
-Une documentation est disponible via le wiki de ce projet github. [Accès à la page résumé](https://github.com/greg06/Baba-Robot/wiki/.R%C3%A9sum%C3%A9).
-
 ## Galerie photos
-Quelques photos son disponible sur picasa web [C'est ici](https://picasaweb.google.com/gregoryfromain/Baba?authuser=0&feat=directlink)
+Quelques photos sont disponibles sur picasa web [C'est ici](https://picasaweb.google.com/gregoryfromain/Baba?authuser=0&feat=directlink)
 
 ## Licence
 [![Contrat Creative Commons](http://i.creativecommons.org/l/by-nc/3.0/88x31.png)](http://creativecommons.org/licenses/by-nc/3.0/)

@@ -3,7 +3,7 @@ Utilisation de node.js avec Baba
 
 ## Installation de node.js
 Avant de pourvoir utiliser node.js, il faut déjà l'installer.
-Et puisque rien n'est simple, il n'est pas possible de le récupérer depuis les dépots (car non comptatible avec ARM6)
+Et puisque rien n'est simple, il n'est pas possible de le récupérer depuis les dépots (car non compatible avec ARM6)
 Il va donc falloir le compiler. La bonne nouvelle c'est que j'ai fait un script qui fait tout le travail.
 La mauvaise nouvelle c'est que c'est très long. (prévoir 3 bonnes heures)
 
@@ -16,7 +16,7 @@ Pour vérifier que node.js est correctement installé :
    node -v
 ```
 ## Charger le projet node de Baba
-Une fois l'installation de node.js est fait, il faut récupérer les dépenses du projet (prévoir 40Mo):
+Une fois l'installation de node.js est faite, il faut récupérer les dépendances du projet (prévoir 40Mo):
 ``` bash
    bash ~/Baba-Robot/doc/software/node/loadProject.sh
 ```

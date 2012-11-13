@@ -5,7 +5,7 @@
 Baba est connecté sur internet en wifi. Il utilise pour cela un dongle trenet N150.
 
 ## Chargement du wifi
-Pour que le wifi soit prit en charge il suffit de copier les fichiers de configuration
+Pour que le wifi soit pris en charge il suffit de copier les fichiers de configuration
 et activer le wlan.
 
 Executer le script :
@@ -13,8 +13,8 @@ Executer le script :
    bash ~/Baba-Robot/doc/software/wifi/loadWifi.sh
 ```
 
-Vous devez maintenant mettre le ssid et mot de passe de votre reseau dans le fichier
-de config. Le premier exemple est permet une connexion en WPA, le 2eme exemple en WEP.
+Vous devez maintenant mettre le SSID et mot de passe de votre reseau dans le fichier
+de config. Le premier exemple permet une connexion en WPA, le 2eme exemple en WEP.
 
 Editer le fichier de config :
 ``` bash
@@ -28,7 +28,7 @@ Il reste maintenant à activer le wifi et rebooter la carte.
 ```
 
 ## Utile
-Pour connaitre l'ip de vos differentes sortie reseau :
+Pour connaitre l'ip de vos differentes sorties reseau :
 ``` bash
    ifconfig
 ```

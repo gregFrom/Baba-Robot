@@ -1,16 +1,16 @@
 ﻿Configuration du son
 ==========
 ## Introduction
-On va traiter ici uniquement l'installation et l'utilisation de la synthèse vocal sans
+On va traiter ici uniquement l'installation et l'utilisation de la synthèse vocale sans
 tarder dans les explications.
-Si vous voulez d'avantage de détail sur le sujet, un très bon article existe sur
+Si vous voulez davantage de détails sur le sujet, un très bon article existe sur
 le [site de Pobot](http://www.pobot.org/Synthese-vocale-avec-espeak-et.html).
 
 ## Branchement
 Baba utilise un ampli sonore, il est branché en direct sur un port jack de la raspberry.
 
 ## Installation
-Pour installer la synthèse vocal il suffit d'executer le script suivant :
+Pour installer la synthèse vocale il suffit d'exécuter le script suivant :
 
 Executez le script :
 ``` bash
@@ -18,7 +18,7 @@ Executez le script :
 ```
 
 ## Utilisation
-Pour démarrer la synthèse vocal il suffit de saisir cette ligne:
+Pour démarrer la synthèse vocale il suffit de saisir cette ligne:
 ``` bash
    bash ~/Baba-Robot/doc/software/sound/sendSound.sh "Bonjour, je suis Baba."
 ```
