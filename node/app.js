@@ -7,7 +7,15 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , exec = require('child_process').exec;
+  
+  
+var baba = {
+    sound : function(text){
+        exec('bash ~/Baba-Robot/doc/software/sound/sendSound.sh "'+text+'"', function(){});
+    }
+};
 
 var app = express();
 
@@ -35,4 +43,5 @@ app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
+  baba.sound("Bonjour, je suis prêt.");
 });
