@@ -1,0 +1,3 @@
+[submodule "Arduino/libraries/Usc1903"]
+	path = Arduino/libraries/Usc1903
+	url = git@github.com:Pobot/Ucs1903.git
